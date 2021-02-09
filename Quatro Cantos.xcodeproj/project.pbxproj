@@ -13,6 +13,7 @@
 		0470EB3925D2B9A500B4D363 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0470EB3825D2B9A500B4D363 /* Preview Assets.xcassets */; };
 		0470EB4425D2B9A500B4D363 /* Quatro_CantosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470EB4325D2B9A500B4D363 /* Quatro_CantosTests.swift */; };
 		0470EB4F25D2B9A500B4D363 /* Quatro_CantosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470EB4E25D2B9A500B4D363 /* Quatro_CantosUITests.swift */; };
+		A7DFE1C425D2C1E000D08746 /* InicioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFE1C325D2C1E000D08746 /* InicioView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		0470EB4A25D2B9A500B4D363 /* Quatro CantosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quatro CantosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0470EB4E25D2B9A500B4D363 /* Quatro_CantosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quatro_CantosUITests.swift; sourceTree = "<group>"; };
 		0470EB5025D2B9A500B4D363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7DFE1C325D2C1E000D08746 /* InicioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0470EB3525D2B9A500B4D363 /* Assets.xcassets */,
 				0470EB3A25D2B9A500B4D363 /* Info.plist */,
 				0470EB3725D2B9A500B4D363 /* Preview Content */,
+				A7DFE1C325D2C1E000D08746 /* InicioView.swift */,
 			);
 			path = "Quatro Cantos";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0470EB3425D2B9A300B4D363 /* ContentView.swift in Sources */,
+				A7DFE1C425D2C1E000D08746 /* InicioView.swift in Sources */,
 				0470EB3225D2B9A300B4D363 /* Quatro_CantosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
