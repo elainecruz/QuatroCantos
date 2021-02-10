@@ -9,7 +9,46 @@ import SwiftUI
 
 struct InicioView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ZStack {
+                Image("papelPautadoInicio")
+                    .resizable()
+                    .scaledToFit()
+                Text("Bem-vindo, folião!")
+                    .font(.custom("Brasilero 2018 Free", size: 24))
+            }
+            Spacer()
+            ZStack {
+                Image("papelInicio")
+                    .resizable()
+                    .scaledToFit()
+                Text("Pronto para descobrir o teu destino?")
+                    .font(.custom("Brasilero 2018 Free", size: 36
+                    ))
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .padding(.horizontal, 55)
+            }
+            Spacer()
+            ZStack {
+                Image("bgVermelho")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFit()
+                Button(action:{print("lalala")})
+                    {Text("Simbora")
+                    .font(.custom("Brasilero 2018 Free", size: 48))
+                    .foregroundColor(Color.white)
+                    .padding(.top, 55)
+                }
+            }
+        }
+        .background(
+            Image("bgInicio")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+        )
     }
 }
 
