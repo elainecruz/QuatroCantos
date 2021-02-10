@@ -14,6 +14,7 @@
 		0470EB4425D2B9A500B4D363 /* Quatro_CantosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470EB4325D2B9A500B4D363 /* Quatro_CantosTests.swift */; };
 		0470EB4F25D2B9A500B4D363 /* Quatro_CantosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470EB4E25D2B9A500B4D363 /* Quatro_CantosUITests.swift */; };
 		0470EB6325D3FD5A00B4D363 /* Brasilero2018Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0470EB6225D3FD5900B4D363 /* Brasilero2018Free.otf */; };
+		A76FCC5725D409C2008F41B8 /* OnibusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FCC5625D409C2008F41B8 /* OnibusView.swift */; };
 		A7DFE1C425D2C1E000D08746 /* InicioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFE1C325D2C1E000D08746 /* InicioView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		0470EB4E25D2B9A500B4D363 /* Quatro_CantosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quatro_CantosUITests.swift; sourceTree = "<group>"; };
 		0470EB5025D2B9A500B4D363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0470EB6225D3FD5900B4D363 /* Brasilero2018Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brasilero2018Free.otf; sourceTree = "<group>"; };
+		A76FCC5625D409C2008F41B8 /* OnibusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusView.swift; sourceTree = "<group>"; };
 		A7DFE1C325D2C1E000D08746 /* InicioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				0470EB6225D3FD5900B4D363 /* Brasilero2018Free.otf */,
 				0470EB3725D2B9A500B4D363 /* Preview Content */,
 				A7DFE1C325D2C1E000D08746 /* InicioView.swift */,
+				A76FCC5625D409C2008F41B8 /* OnibusView.swift */,
 			);
 			path = "Quatro Cantos";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				0470EB3425D2B9A300B4D363 /* ContentView.swift in Sources */,
 				A7DFE1C425D2C1E000D08746 /* InicioView.swift in Sources */,
+				A76FCC5725D409C2008F41B8 /* OnibusView.swift in Sources */,
 				0470EB3225D2B9A300B4D363 /* Quatro_CantosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
