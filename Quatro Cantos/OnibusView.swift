@@ -50,6 +50,10 @@ struct OnibusView: View {
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
                     .padding(.horizontal, 45)
+                    .offset(x: 0,y: -150)
+            }
+            .onTapGesture {
+                print("tapper")
             }
             .background(Image("bgVerde")
                             .resizable()
