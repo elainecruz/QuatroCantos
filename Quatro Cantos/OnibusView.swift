@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnibusView: View {
+    @State var nextView = false
     var body: some View {
         VStack{
             ZStack{
@@ -53,13 +54,16 @@ struct OnibusView: View {
                     .offset(x: 0,y: -150)
             }
             .onTapGesture {
-                print("tapper")
+                self.nextView.toggle()
             }
             .background(Image("bgVerde")
                             .resizable()
                             .ignoresSafeArea()
             )
         }
+        .fullScreenCover(isPresented: $nextView, content: {
+            AchoePoucoView()
+        })
         .ignoresSafeArea()
         .background(
             Image("bgOnibus")

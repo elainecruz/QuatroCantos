@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InicioView: View {
+    @State var nextView = false
+    
     var body: some View {
         VStack{
             ZStack {
@@ -35,12 +37,23 @@ struct InicioView: View {
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFit()
-                Button(action:{print("lalala")})
-                    {Text("Simbora")
+                
+                Button(action:{
+                    print("lalala")
+                    self.nextView.toggle()
+                    
+                })
+                {Text("Simbora")
                     .font(.custom("Brasilero 2018 Free", size: 48))
                     .foregroundColor(Color.white)
                     .padding(.top, 55)
+                    
                 }
+                .fullScreenCover(isPresented: $nextView, content: {
+                    OnibusView()
+                })
+                
+                    
             }
         }
         .background(
