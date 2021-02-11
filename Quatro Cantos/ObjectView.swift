@@ -29,36 +29,36 @@ struct ObjectView: View {
                 print()
             }
             .gesture(
-                DragGesture()
+                DragGesture (minimumDistance: 0, coordinateSpace: .global)
                     .onChanged{ value in
                         self.dragAmount = CGSize(width: value.translation.width + offset[0], height: value.translation.height + offset[1])
                         
                     }
                     
                     
-                    .onEnded{value in
+                    .onEnded (){value in
                         
 
-                       // print(value.location.x)
+                       print(value.location.x)
                         print(value.location.y)
-                      // print(value.translation.width)
+                      print(value.translation.width)
                         print(value.translation.height)
                         print()
 //
                         
-                        //if(self.dragAmount.width >= 100  && self.dragAmount.height >= 100 ){
+                        if(value.location.x>=140 && value.location.x<=300 && value.location.y>=400 && value.location.y<=700 ){
                             //Chegou na pochete
+                            print ("chegou na pochete")
+                            if(belong){
+                                //pertence a essa pochete
+                                print("uhuu")
+                            }else{
+                                //Carregar view de errou
+                            }
                             
-                        if(belong){
-                            //pertence a essa pochete
-                            print("uhuu")
                         }else{
-                            //Carregar view de errou
+                            self.dragAmount = CGSize(width: offset[0], height: offset[1])
                         }
-                            
-//                        }else{
-//                            self.dragAmount = CGSize(width: offset[0], height: offset[1])
-//                        }
                        
                         self.dragAmount = CGSize(width: offset[0], height: offset[1])
                     }
