@@ -12,7 +12,7 @@ struct Quatro_CantosApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            OnibusView()
+            AchoePoucoView()
         }
     }
 }

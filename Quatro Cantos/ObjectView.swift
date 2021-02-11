@@ -14,37 +14,51 @@ struct ObjectView: View {
     @State var dragAmount: CGSize
     var belong: Bool
     var value: [CGFloat]
+    var imageView: some View {
+        Image(image)
+        .resizable()
+        .scaledToFit()
+        .aspectRatio(aspectRatio, contentMode: .fit)
+        .offset(dragAmount)
+    }
+       
     
     var body: some View {
-        Image(image)
-            .resizable()
-            .scaledToFit()
-            .aspectRatio(aspectRatio, contentMode: .fit)
-            .offset(dragAmount)
+        imageView
+            .onTapGesture {
+                print()
+            }
             .gesture(
                 DragGesture()
                     .onChanged{ value in
                         self.dragAmount = CGSize(width: value.translation.width + offset[0], height: value.translation.height + offset[1])
+                        
                     }
+                    
                     
                     .onEnded{value in
                         
-                        print(value.location.x)
+
+                       // print(value.location.x)
                         print(value.location.y)
-            
+                      // print(value.translation.width)
+                        print(value.translation.height)
+                        print()
+//
                         
-                        if(self.dragAmount.width >= 100  && self.dragAmount.height >= 100 ){
+                        //if(self.dragAmount.width >= 100  && self.dragAmount.height >= 100 ){
                             //Chegou na pochete
                             
-                            if(belong){
-                                //pertence a essa pochete
-                            }else{
-                                //Carregar viu de errou
-                            }
-                            
+                        if(belong){
+                            //pertence a essa pochete
+                            print("uhuu")
                         }else{
-                            self.dragAmount = CGSize(width: offset[0], height: offset[1])
+                            //Carregar view de errou
                         }
+                            
+//                        }else{
+//                            self.dragAmount = CGSize(width: offset[0], height: offset[1])
+//                        }
                        
                         self.dragAmount = CGSize(width: offset[0], height: offset[1])
                     }
