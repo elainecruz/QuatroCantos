@@ -9,53 +9,82 @@ import SwiftUI
 
 struct AchoePoucoView: View {
     
+    @State var opacity = 1.0
+    
     var body: some View {
-        VStack{
-            Image("OnibusAchoePouco")
-                .resizable()
-                .scaledToFit()
-                .aspectRatio(1.7, contentMode: .fit)
-            
-            Spacer()
-            
-            HStack{
-              
-                ObjectView(image: "GlitterDourado", aspectRatio: 0.8, offset: [0,100], dragAmount: CGSize(width: 0, height: 100), belong: true, value: [1,1])
-
-                ObjectView(image: "Hb20", aspectRatio: 1, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1])
-
-
-                ObjectView(image: "cervejanossa", aspectRatio: 0.4, offset: [0,100], dragAmount:CGSize(width: 0, height: 100), belong: true, value: [1,1])
-            }
-            .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
-            
-            Image("pocheteAmarela")
-                .resizable()
-                .zIndex(0)
-                .scaledToFit()
-                .aspectRatio(0.9, contentMode: .fit)
-                .offset(x:0, y:0)
+        ZStack{
+            VStack{
+                Image("OnibusAchoePouco")
+                    .resizable()
+                    .scaledToFit()
+                    .aspectRatio(1.7, contentMode: .fit)
                 
-            
+                Spacer()
+                
+                HStack{
+                  
+                    ObjectView(image: "GlitterDourado", aspectRatio: 0.8, offset: [0,100], dragAmount: CGSize(width: 0, height: 100), belong: true, value: [1,1])
 
-            HStack{
-                ObjectView(image: "Batom", aspectRatio: 0.6, offset: [0,-100], dragAmount: CGSize(width: 0, height: -100), belong: true, value: [1,1])
-    
-                ObjectView(image: "caipiroska", aspectRatio: 0.5, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1])
-    
-                ObjectView(image: "foiceEmartelo", aspectRatio: 0.6, offset: [0,-100], dragAmount:CGSize(width: 0, height: -100), belong: true, value: [1,1])
+                    ObjectView(image: "Hb20", aspectRatio: 1, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1])
 
+
+                    ObjectView(image: "cervejanossa", aspectRatio: 0.4, offset: [0,100], dragAmount:CGSize(width: 0, height: 100), belong: true, value: [1,1])
+                }
+                .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                
+                Image("pocheteAmarela")
+                    .resizable()
+                    .zIndex(0)
+                    .scaledToFit()
+                    .aspectRatio(0.9, contentMode: .fit)
+                    .offset(x:0, y:0)
+                    
+                
+
+                HStack{
+                    ObjectView(image: "Batom", aspectRatio: 0.6, offset: [0,-100], dragAmount: CGSize(width: 0, height: -100), belong: true, value: [1,1])
+        
+                    ObjectView(image: "caipiroska", aspectRatio: 0.5, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1])
+        
+                    ObjectView(image: "foiceEmartelo", aspectRatio: 0.6, offset: [0,-100], dragAmount:CGSize(width: 0, height: -100), belong: true, value: [1,1])
+
+                }
+                
+                Spacer()
+                
+             
             }
+            .background(
+                Image("bgAchoePouco")
+                    .resizable()
+                    .ignoresSafeArea()
+            )
             
-            Spacer()
+            Image("papelInicio")
+            VStack{
+                
+                Button(action: {
+                    print("opa")
+                    self.opacity = 0
+                }, label: {
+                    Image("fecharLaranja")
+                        .resizable()
+                        .scaledToFit()
+                        .aspectRatio(4, contentMode: .fit)
+                        .offset(x: 150, y: -100)
+                })
+                Text("Arraste para dentro da pochete os objetos que esse passageiro está levando para esse destino")
+                    .padding(.horizontal, 350)
+                    .font(.custom("Brasilero 2018 Free", size: 35))
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .offset(x: 0, y: -130)
+            }
+            .opacity(opacity)
             
-         
+                   
         }
-        .background(
-            Image("bgAchoePouco")
-                .resizable()
-                .ignoresSafeArea()
-        )
+
     }
 }
 
