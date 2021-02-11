@@ -11,7 +11,8 @@ import SwiftUI
 struct Quatro_CantosApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            AchoePoucoView()
         }
     }
 }

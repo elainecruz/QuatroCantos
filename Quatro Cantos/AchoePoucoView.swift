@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AchoePoucoView: View {
+    
     var body: some View {
         VStack{
             Image("OnibusAchoePouco")
@@ -18,63 +19,37 @@ struct AchoePoucoView: View {
             Spacer()
             
             HStack{
-                
-                Image("GlitterDourado")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(0.8, contentMode: .fit)
-                    .offset(x: 0, y: 100)
-                    //.padding(.top, 100)
+              
+                ObjectView(image: "GlitterDourado", aspectRatio: 0.8, offset: [0,100], dragAmount: CGSize(width: 0, height: 100), belong: true, value: [1,1])
+
+                ObjectView(image: "Hb20", aspectRatio: 1, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1])
 
 
-                Image("Hb20")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(1, contentMode: .fit)
-
-
-                Image("cervejanossa")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(0.4, contentMode: .fit)
-                    .offset(x: 0, y: 100)
-
-
+                ObjectView(image: "cervejanossa", aspectRatio: 0.4, offset: [0,100], dragAmount:CGSize(width: 0, height: 100), belong: true, value: [1,1])
             }
+            .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+            
             Image("pocheteAmarela")
                 .resizable()
+                .zIndex(0)
                 .scaledToFit()
                 .aspectRatio(0.9, contentMode: .fit)
-
-
+                .offset(x:0, y:0)
+                
+            
 
             HStack{
-                Image("Batom")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(0.6, contentMode: .fit)
-                    .offset(x: 0, y: -100)
-
-
-
-                Image("caipiroska")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(0.5, contentMode: .fit)
-
-
-                Image("foiceEmartelo")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(0.6, contentMode: .fit)
-                    .offset(x: 0, y: -100)
-
-
+                ObjectView(image: "Batom", aspectRatio: 0.6, offset: [0,-100], dragAmount: CGSize(width: 0, height: -100), belong: true, value: [1,1])
+    
+                ObjectView(image: "caipiroska", aspectRatio: 0.5, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1])
+    
+                ObjectView(image: "foiceEmartelo", aspectRatio: 0.6, offset: [0,-100], dragAmount:CGSize(width: 0, height: -100), belong: true, value: [1,1])
 
             }
             
             Spacer()
             
+         
         }
         .background(
             Image("bgAchoePouco")
