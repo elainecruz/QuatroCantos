@@ -10,6 +10,7 @@ import SwiftUI
 struct OnibusView: View {
     @State var nextView = false
     @State var offset: CGFloat = -250
+    @State var opacity: Double = 0
     var body: some View {
         VStack{
             ZStack{
@@ -34,24 +35,38 @@ struct OnibusView: View {
                     .scaledToFit()
                     .aspectRatio(1, contentMode: .fit)
                     .offset(x: 100, y: 0)
+                    .opacity(opacity)
+                    .animation(
+                        Animation.easeIn(duration: 0.5)
+                            .delay(0.7)
+                    )
+                    
                 Text("Vai desceê!!!")
                     .font(.custom("Brasilero 2018 Free", size: 18))
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
                     .padding(.horizontal, 50)
                     .offset(x: 100, y: -5)
+                    .opacity(opacity)
+                    .animation(
+                        Animation.easeIn(duration: 0.5)
+                            .delay(0.7)
+                    )
+
             }
             VStack{
                 Image("onibusBonfim")
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFit()
-                    .offset(x: offset, y: 0)
+                    .offset(x: offset, y: -50)
                     .onAppear(perform: {
                         self.offset = 0
+                        opacity = 1
                     })
                     .animation(
                         Animation.default.speed(0.5)
+                            .delay(0.1)
                     )
                             
                 
