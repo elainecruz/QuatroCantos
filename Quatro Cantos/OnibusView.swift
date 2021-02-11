@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnibusView: View {
     @State var nextView = false
+    @State var offset: CGFloat = -250
     var body: some View {
         VStack{
             ZStack{
@@ -24,6 +25,7 @@ struct OnibusView: View {
                     .lineLimit(nil)
                     .padding(.horizontal, 65)
                     .offset(x: -60, y: -30)
+                    
             }
             ZStack{
                 Image("balao")
@@ -44,6 +46,15 @@ struct OnibusView: View {
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFit()
+                    .offset(x: offset, y: 0)
+                    .onAppear(perform: {
+                        self.offset = 0
+                    })
+                    .animation(
+                        Animation.default.speed(0.5)
+                    )
+                            
+                
                 Spacer()
                 Text("SIMBORA")
                     .font(.custom("Brasilero 2018 Free", size: 48))
