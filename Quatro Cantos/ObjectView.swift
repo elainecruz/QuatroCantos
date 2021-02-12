@@ -14,12 +14,23 @@ struct ObjectView: View {
     @State var dragAmount: CGSize
     var belong: Bool
     var value: [CGFloat]
+    @Binding var acertou: Bool
+    @Binding var errou: Bool
+    @Binding var changeview: Bool {
+        didSet{
+            print("acertou: " , acertou)
+            print("errou: ", errou)
+            print("changeview: ", changeview)
+        }
+    }
+    
     var imageView: some View {
         Image(image)
         .resizable()
         .scaledToFit()
         .aspectRatio(aspectRatio, contentMode: .fit)
         .offset(dragAmount)
+        
     }
        
     
@@ -51,9 +62,24 @@ struct ObjectView: View {
                             print ("chegou na pochete")
                             if(belong){
                                 //pertence a essa pochete
+                                AchoePoucoView.counter += 1
+                                if(AchoePoucoView.counter==4){
+                                    self.errou = false
+                                    self.acertou = true
+                                    self.changeview = true
+
+                                }
                                 print("uhuu")
                             }else{
+                                print("errou")
                                 //Carregar view de errou
+                                self.acertou = false
+                                self.errou = true
+                                self.changeview = true
+
+                                //print(errou)
+                                print("acertou: ", self.acertou)
+
                             }
                             
                         }else{
@@ -66,8 +92,8 @@ struct ObjectView: View {
     }
 }
 
-struct ObjectView_Previews: PreviewProvider {
-    static var previews: some View {
-        ObjectView(image: "GlitterDourado", aspectRatio: 0.8, offset: [0,100], dragAmount: CGSize(width: 0, height: 100), belong: true, value: [90, 100])
-    }
-}
+//struct ObjectView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ObjectView(image: "GlitterDourado", aspectRatio: 0.8, offset: [0,100], dragAmount: CGSize(width: 0, height: 100), belong: true, value: [90, 100])
+//    }
+//}

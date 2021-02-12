@@ -55,7 +55,7 @@ struct OnibusView: View {
 
             }
             VStack{
-                Image("onibusBonfim")
+                Image("OnibusAchoePouco")
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFit()
