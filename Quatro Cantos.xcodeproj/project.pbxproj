@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0412438025D5FC0D007C0131 /* AcertouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412437F25D5FC0D007C0131 /* AcertouView.swift */; };
 		0470EB3225D2B9A300B4D363 /* Quatro_CantosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470EB3125D2B9A300B4D363 /* Quatro_CantosApp.swift */; };
 		0470EB3425D2B9A300B4D363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470EB3325D2B9A300B4D363 /* ContentView.swift */; };
 		0470EB3625D2B9A500B4D363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0470EB3525D2B9A500B4D363 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0412437F25D5FC0D007C0131 /* AcertouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcertouView.swift; sourceTree = "<group>"; };
 		0470EB2E25D2B9A300B4D363 /* Quatro Cantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quatro Cantos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0470EB3125D2B9A300B4D363 /* Quatro_CantosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quatro_CantosApp.swift; sourceTree = "<group>"; };
 		0470EB3325D2B9A300B4D363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				86C033E025D422F500320758 /* AchoePoucoView.swift */,
 				867D04F425D555E700E8B139 /* ObjectView.swift */,
 				867D04F925D5836C00E8B139 /* ErrouView.swift */,
+				0412437F25D5FC0D007C0131 /* AcertouView.swift */,
 			);
 			path = "Quatro Cantos";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				0470EB3425D2B9A300B4D363 /* ContentView.swift in Sources */,
 				867D04F525D555E700E8B139 /* ObjectView.swift in Sources */,
+				0412438025D5FC0D007C0131 /* AcertouView.swift in Sources */,
 				867D04FA25D5836C00E8B139 /* ErrouView.swift in Sources */,
 				A7DFE1C425D2C1E000D08746 /* InicioView.swift in Sources */,
 				86C033E125D422F500320758 /* AchoePoucoView.swift in Sources */,
