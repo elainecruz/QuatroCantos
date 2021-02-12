@@ -15,13 +15,16 @@ struct ObjectView: View {
     var belong: Bool
     var value: [CGFloat]
     @ObservedObject var banco: BankViewModel
+    @State var opacity = 1.0
     
     var imageView: some View {
         Image(image)
         .resizable()
+        .opacity(opacity)
         .scaledToFit()
         .aspectRatio(aspectRatio, contentMode: .fit)
         .offset(dragAmount)
+        
         
     }
        
@@ -55,6 +58,7 @@ struct ObjectView: View {
                             if(belong){
                                 //pertence a essa pochete
                                 AchoePoucoView.counter += 1
+                                opacity = 0.0
                                 if(AchoePoucoView.counter==4){
                                     self.banco.acertou = true
                                     self.banco.errou = false
