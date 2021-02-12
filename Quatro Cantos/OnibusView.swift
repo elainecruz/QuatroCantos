@@ -11,6 +11,8 @@ struct OnibusView: View {
     @State var nextView = false
     @State var offset: CGFloat = -400
     @State var opacity: Double = 0
+    
+    
     var body: some View {
         VStack{
             ZStack{
@@ -88,7 +90,7 @@ struct OnibusView: View {
             )
         }
         .fullScreenCover(isPresented: $nextView, content: {
-            AchoePoucoView()
+            AchoePoucoView(banco: BankViewModel())
         })
         .ignoresSafeArea()
         .background(

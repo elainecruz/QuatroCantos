@@ -11,9 +11,7 @@ struct AchoePoucoView: View {
     
     @State var opacity = 1.0
     public static var counter = 0
-    @State var acertouViewBool = false
-    @State var errouViewBool = false
-    @State var nextView = false
+    @ObservedObject var banco: BankViewModel
 
     
     var body: some View {
@@ -28,12 +26,12 @@ struct AchoePoucoView: View {
                 
                 HStack{
                   
-                    ObjectView(image: "GlitterDourado", aspectRatio: 0.8, offset: [0,100], dragAmount: CGSize(width: 0, height: 100), belong: true, value: [1,1], acertou: $acertouViewBool, errou: $errouViewBool, changeview: $nextView)
+                    ObjectView(image: "GlitterDourado", aspectRatio: 0.8, offset: [0,100], dragAmount: CGSize(width: 0, height: 100), belong: true, value: [1,1], banco: banco)
 
-                    ObjectView(image: "Hb20", aspectRatio: 1, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1], acertou: $acertouViewBool, errou: $errouViewBool, changeview: $nextView)
+                    ObjectView(image: "Hb20", aspectRatio: 1, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1], banco: banco)
 
 
-                    ObjectView(image: "cervejanossa", aspectRatio: 0.4, offset: [0,100], dragAmount:CGSize(width: 0, height: 100), belong: true, value: [1,1], acertou: $acertouViewBool, errou: $errouViewBool, changeview: $nextView)
+                    ObjectView(image: "cervejanossa", aspectRatio: 0.4, offset: [0,100], dragAmount:CGSize(width: 0, height: 100), belong: true, value: [1,1], banco: banco)
                 }
                 .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                 .padding(.horizontal, 200)
@@ -48,11 +46,11 @@ struct AchoePoucoView: View {
                 
 
                 HStack{
-                    ObjectView(image: "Batom", aspectRatio: 0.6, offset: [0,-100], dragAmount: CGSize(width: 0, height: -100), belong: true, value: [1,1], acertou: $acertouViewBool, errou: $errouViewBool, changeview: $nextView)
+                    ObjectView(image: "Batom", aspectRatio: 0.6, offset: [0,-100], dragAmount: CGSize(width: 0, height: -100), belong: true, value: [1,1], banco: banco)
         
-                    ObjectView(image: "caipiroska", aspectRatio: 0.5, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1], acertou: $acertouViewBool, errou: $errouViewBool, changeview: $nextView)
+                    ObjectView(image: "caipiroska", aspectRatio: 0.5, offset: [0,0], dragAmount: CGSize.zero, belong: false, value: [1,1], banco: banco)
         
-                    ObjectView(image: "foiceEmartelo", aspectRatio: 0.6, offset: [0,-100], dragAmount:CGSize(width: 0, height: -100), belong: true, value: [1,1], acertou: $acertouViewBool, errou: $errouViewBool, changeview: $nextView)
+                    ObjectView(image: "foiceEmartelo", aspectRatio: 0.6, offset: [0,-100], dragAmount:CGSize(width: 0, height: -100), belong: true, value: [1,1], banco: banco)
 
                 }
                 
@@ -99,18 +97,18 @@ struct AchoePoucoView: View {
             
                    
         }
-        .fullScreenCover(isPresented: $nextView, content: {
-            if(errouViewBool){
+        .fullScreenCover(isPresented: $banco.nextView, content: {
+            if(banco.errou){
                 ErrouView()
                     .onAppear{
                         print("Entro na errou")
                     }
 
-            }else{
+            }else if(banco.acertou){
                 AcertouView()
                     .onAppear{
                         print("Entro na acertou")
-                        print(errouViewBool)
+                        
 
                     }
             }
@@ -118,9 +116,9 @@ struct AchoePoucoView: View {
     }
 }
 
-struct AchoePoucoView_Previews: PreviewProvider {
-    static var previews: some View {
-        AchoePoucoView()
-            .previewDevice("iPhone 11")
-    }
-}
+//struct AchoePoucoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AchoePoucoView()
+//            .previewDevice("iPhone 11")
+//    }
+//}

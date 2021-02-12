@@ -17,6 +17,7 @@
 		0470EB6325D3FD5A00B4D363 /* Brasilero2018Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0470EB6225D3FD5900B4D363 /* Brasilero2018Free.otf */; };
 		867D04F525D555E700E8B139 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D04F425D555E700E8B139 /* ObjectView.swift */; };
 		867D04FA25D5836C00E8B139 /* ErrouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D04F925D5836C00E8B139 /* ErrouView.swift */; };
+		869A1E1125D6B3350021081B /* BankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A1E1025D6B3350021081B /* BankViewModel.swift */; };
 		86C033E125D422F500320758 /* AchoePoucoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C033E025D422F500320758 /* AchoePoucoView.swift */; };
 		A76FCC5725D409C2008F41B8 /* OnibusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FCC5625D409C2008F41B8 /* OnibusView.swift */; };
 		A7DFE1C425D2C1E000D08746 /* InicioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFE1C325D2C1E000D08746 /* InicioView.swift */; };
@@ -56,6 +57,7 @@
 		0470EB6225D3FD5900B4D363 /* Brasilero2018Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brasilero2018Free.otf; sourceTree = "<group>"; };
 		867D04F425D555E700E8B139 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 		867D04F925D5836C00E8B139 /* ErrouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrouView.swift; sourceTree = "<group>"; };
+		869A1E1025D6B3350021081B /* BankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewModel.swift; sourceTree = "<group>"; };
 		86C033E025D422F500320758 /* AchoePoucoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchoePoucoView.swift; sourceTree = "<group>"; };
 		A76FCC5625D409C2008F41B8 /* OnibusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusView.swift; sourceTree = "<group>"; };
 		A7DFE1C325D2C1E000D08746 /* InicioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				867D04F425D555E700E8B139 /* ObjectView.swift */,
 				867D04F925D5836C00E8B139 /* ErrouView.swift */,
 				0412437F25D5FC0D007C0131 /* AcertouView.swift */,
+				869A1E1025D6B3350021081B /* BankViewModel.swift */,
 			);
 			path = "Quatro Cantos";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0470EB3425D2B9A300B4D363 /* ContentView.swift in Sources */,
+				869A1E1125D6B3350021081B /* BankViewModel.swift in Sources */,
 				867D04F525D555E700E8B139 /* ObjectView.swift in Sources */,
 				0412438025D5FC0D007C0131 /* AcertouView.swift in Sources */,
 				867D04FA25D5836C00E8B139 /* ErrouView.swift in Sources */,

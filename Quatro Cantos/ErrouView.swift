@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct ErrouView: View {
+    @State var nextView = false
+    
     var body: some View {
         VStack {
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                self.nextView.toggle()
+                
+            }, label: {
                 Image("fecharLaranja")
                     .resizable()
                     .scaledToFit()
-                    .aspectRatio(4, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    .offset(x: 140, y: 90)
+                    .aspectRatio(1.2, contentMode: .fit)
+                    .padding(.leading, 200)
+                    .offset(x: 50, y: 90)
             })
+           
+            
+            
             HStack {
                 Image("lama1")
                     .resizable()
@@ -50,7 +59,7 @@ struct ErrouView: View {
                 .resizable()
                 .scaledToFit()
                 .ignoresSafeArea()
-                .offset(x: -105, y: -135)
+                .offset(x: -105, y: -200)
         }
         .ignoresSafeArea()
         .background(
@@ -58,6 +67,9 @@ struct ErrouView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea())
+        .fullScreenCover(isPresented: $nextView, content: {
+            InicioView()
+        })
     }
 }
 

@@ -14,15 +14,7 @@ struct ObjectView: View {
     @State var dragAmount: CGSize
     var belong: Bool
     var value: [CGFloat]
-    @Binding var acertou: Bool
-    @Binding var errou: Bool
-    @Binding var changeview: Bool {
-        didSet{
-            print("acertou: " , acertou)
-            print("errou: ", errou)
-            print("changeview: ", changeview)
-        }
-    }
+    @ObservedObject var banco: BankViewModel
     
     var imageView: some View {
         Image(image)
@@ -64,21 +56,21 @@ struct ObjectView: View {
                                 //pertence a essa pochete
                                 AchoePoucoView.counter += 1
                                 if(AchoePoucoView.counter==4){
-                                    self.errou = false
-                                    self.acertou = true
-                                    self.changeview = true
-
+                                    self.banco.acertou = true
+                                    self.banco.errou = false
+                                    self.banco.nextView = true
+                                   
                                 }
                                 print("uhuu")
                             }else{
                                 print("errou")
                                 //Carregar view de errou
-                                self.acertou = false
-                                self.errou = true
-                                self.changeview = true
+                                self.banco.acertou = false
+                                self.banco.errou = true
+                                self.banco.nextView = true
 
                                 //print(errou)
-                                print("acertou: ", self.acertou)
+                               
 
                             }
                             
