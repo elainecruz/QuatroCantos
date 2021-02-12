@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnibusView: View {
     @State var nextView = false
-    @State var offset: CGFloat = -250
+    @State var offset: CGFloat = -400
     @State var opacity: Double = 0
     var body: some View {
         VStack{
@@ -38,7 +38,7 @@ struct OnibusView: View {
                     .opacity(opacity)
                     .animation(
                         Animation.easeIn(duration: 0.5)
-                            .delay(0.7)
+                            .delay(0.9)
                     )
                     
                 Text("Vai desceê!!!")
@@ -50,7 +50,7 @@ struct OnibusView: View {
                     .opacity(opacity)
                     .animation(
                         Animation.easeIn(duration: 0.5)
-                            .delay(0.7)
+                            .delay(0.9)
                     )
 
             }
@@ -66,7 +66,7 @@ struct OnibusView: View {
                     })
                     .animation(
                         Animation.default.speed(0.5)
-                            .delay(0.1)
+                            .delay(0.5)
                     )
                             
                 

@@ -31,6 +31,7 @@ struct AchoePoucoView: View {
                     ObjectView(image: "cervejanossa", aspectRatio: 0.4, offset: [0,100], dragAmount:CGSize(width: 0, height: 100), belong: true, value: [1,1])
                 }
                 .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal, 200)
                 
                 Image("pocheteAmarela")
                     .resizable()
@@ -61,7 +62,10 @@ struct AchoePoucoView: View {
             )
             
             Image("papelInicio")
+                .opacity(opacity)
+            
             VStack{
+                
                 
                 Button(action: {
                     print("opa")
@@ -70,15 +74,21 @@ struct AchoePoucoView: View {
                     Image("fecharLaranja")
                         .resizable()
                         .scaledToFit()
-                        .aspectRatio(4, contentMode: .fit)
-                        .offset(x: 150, y: -100)
+                        .aspectRatio(2.8, contentMode: .fit)
+                        .offset(x: 130, y: -80)
+                    
                 })
+//                .scaledToFit()
+//                .aspectRatio(2, contentMode: .fit)
+//                .padding(.leading, 100)
+                
+                        
                 Text("Arraste para dentro da pochete os objetos que esse passageiro está levando para esse destino")
                     .padding(.horizontal, 350)
                     .font(.custom("Brasilero 2018 Free", size: 35))
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
-                    .offset(x: 0, y: -130)
+                    .offset(x: 0, y: -150)
             }
             .opacity(opacity)
             
